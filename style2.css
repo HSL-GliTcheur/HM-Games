@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&display=swap');
+
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+.sec-1 {
+  background-color: rgb(225, 237, 255);
+  height: 290vh;
+}
+
+@media (max-width: 425px) {
+  .sec-1 {
+    background-color: rgb(225, 237, 255);
+    height: 310vh;
+  }
+
+}
+
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+  background: #f4f4f4;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  background: #fafafa;
+  box-shadow: inset 0px -1.5px 0px #000000;
+  z-index: 999;
+}
+  
+.nav-icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-icon span {
+  font-family: Roboto Flex, sans-serif;
+  font-size: 25px;
+  margin-left: 10px;
+  font-weight: 400;
+  color: #333;
+}
+.nav-icon img {
+  width: 40px;
+  transform: rotate(-17deg) translateX(5px);
+}
+.hamburger {
+  display: none;
+}
+.navlinks-container a {
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #414141;
+  display: inline-block;
+  position: relative;
+  border: 1.5px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  transition: all 0.5s ease-out;
+}
+
+.home:hover {
+    background-color: rgb(121, 121, 121);
+    color: white;
+    transition: all 1s ease-out;
+  }
+
+.btn-1:hover {
+    background-color: rgb(121, 121, 121);
+    color: white;
+    transition: all 1s ease-out;
+  }
+
+.btn-2:hover {
+    background-color: rgb(121, 121, 121);
+    color: white;
+    transition: all 1s ease-out;
+  }
+
+.btn-3:hover {
+    background-color: rgb(121, 121, 121);
+    color: white;
+    transition: all 1s ease-out;
+  }
+
+.btn-4:hover {
+    background-color: rgb(121, 121, 121);
+    color: white;
+    transition: all 1s ease-out;
+  }
+
+
+.navlinks-container a:hover::after {
+  transform: scaleX(1)
+}
+
+.nav-authentication {
+  margin-left: auto;
+}
+
+
+
+@media (max-width: 900px) {
+  nav {
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .nav-icon {
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .nav-icon span {
+    font-size: 22px;
+  }
+
+  .main-navlinks {
+    order: 1;
+  }
+  /* Hamburger */
+  .hamburger {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    background: #fafafa;
+    align-items: center;
+    position: relative;
+  }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.3s 0.15s ease-out;
+  }
+  .hamburger span:nth-child(1),
+  .hamburger span:nth-child(3) {
+    transition: transform 0.3s ease-out;
+  }
+  .hamburger span:nth-child(1) {
+    transform: translateY(7px);
+  }
+  .hamburger span:nth-child(3) {
+    transform: translateY(-7px);
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translate(0) rotate(135deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0s ease-out;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translate(0) rotate(-135deg);
+  }
+
+  .navlinks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background: #fafafa;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    padding: 15px 50px 15px 20px;
+    border-right: 1px solid #c5c5c6;
+    transform: translate(-100%);
+  }
+  .open {
+    transform: translate(0%);
+  }
+  .navlinks-container a {
+    font-size: 18px;
+    margin: 10px 0
+  }
+
+  .nav-authentication {
+    order: 3;
+    margin-left: 0;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .nav-icon img {
+    width: 30px;
+  }
+  .nav-icon span {
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+
+.autre-jeu {
+  display: flex;
+  position: relative;
+  padding-top: 10%;
+}
+
+.GTA {
+  display: flex;
+}
+
+.GTA img {
+  height: 200px;
+  margin: 2%;
+}
+
+.GTA-p {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+  
+}
+
+.GTA-prix {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.GTA-des {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .GTA-p {
+    display: flex;
+    margin-top: 5%;
+  }
+  
+  .GTA-prix {
+    display: flex;
+    margin-top: 5%;
+  }
+  
+  }
+
+  @media (max-width: 425px) {
+    .GTA-p {
+      display: flex;
+      margin-top: 5%;
+    }
+    
+    .GTA-prix {
+      display: flex;
+      margin-top: 20%;
+      margin-left: -15%;
+    }
+  }
+
+  .separation {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px dashed black;
+  }
+
+
+.Minecraft {
+  display: flex;
+}
+
+.Minecraft img {
+  height: 200px;
+  margin: 2%;
+}
+
+.MC-p {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+  
+}
+
+.MC-prix {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.MC-des {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .MC-p {
+    display: flex;
+    margin-top: 5%;
+  }
+  
+  .MC-prix {
+    display: flex;
+    margin-top: 5%;
+  }
+  
+  }
+
+  @media (max-width: 425px) {
+    .MC-p {
+      display: flex;
+      margin-top: 5%;
+    }
+    
+    .MC-prix {
+      display: flex;
+      margin-top: 20%;
+      margin-left: -15%;
+    }
+  }
+
+
+
+
+.liens-jeu {
+  display: flex;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 0.5%;
+}
+
+.ul-lien {
+  margin-top: 2%;
+}
+
+.list-lien {
+  list-style-type: disc;
+  margin-left: 30px;
+  color: #000000;
+  transition: 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+.ul-lien a {
+  display: flex;
+  margin-right: 80%;
+}
+
+@media (max-width: 768px) {
+ 
+  .ul-lien a {
+    margin-right: 65%;
+  }
+}
+
+@media (max-width: 425px) {
+ 
+  .ul-lien a {
+    margin-right: 50%;
+  }
+}
+
+.list-lien:hover {
+  color: #999;
+  cursor: pointer;
+}
+
+
+
+  
+
+
+
+
+footer {
+  flex-shrink: 0;
+  border-top: 1.9px dashed #fff;
+  width: 100%;
+  background: #333;
+  color: #eee;
+}
+.content-footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 16px;
+  padding: 50px 0 100px;
+}
+
+.bloc {
+  flex-basis: 20%;
+  margin: 0 30px;
+}
+
+/* contact */
+.footer-contact h3,
+.footer-services h3,
+.footer-schedule h3,
+.footer-medias h3 {
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+
+.footer-contact p {
+  padding: 5px 0;
+  color: #eee;
+}
+
+.footer-contact p a {
+  cursor: pointer;
+}
+
+/* Services */
+
+
+.services-list,
+.schedule-list,
+.media-list {
+  list-style-type: none;
+}
+.services-list li {
+  padding: 2px 0;
+}
+.services-list a {
+  text-decoration: none;
+  color: #eee;
+}
+.services-list a:hover {
+  color: rgb(3,3,3);
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1000px) {
+
+  .content-footer {
+      max-width: 100%;
+      flex-wrap: wrap;
+  }
+  .bloc {
+      flex-basis: auto;
+      margin: 20px 20px;
+  }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .content-footer {
+      justify-content: center;
+      padding-top: 30px;
+  }
+  .bloc {
+      flex-basis: 70%;
+      /* margin: 10px; */
+  }
+  .footer-contact h3,
+  .footer-services h3,
+  .footer-schedule h3,
+  .footer-medias h3 {
+      padding-bottom: 5px;
+  }
+
+}
